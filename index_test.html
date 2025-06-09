@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈페이지</title>
+    <link href="./css/samsung_style.css" rel="stylesheet">
+    <link href="./css/menustyle.css" rel="stylesheet"> 
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js" integrity="sha256-AlTido85uXPlSyyaZNsjJXeCs07eSv3r43kyCVc8ChI=" crossorigin="anonymous"></script>
+    <script>
+        //.mainMenu 마우스오버시 header의 높이가 316px 마우스 아웃시 header 높이 80px
+        $(function () {
+            /*$('.mainMenu').mouseenter(function () {
+                $('header').stop().animate({ height: '316px' }, 500);
+            }).mouseleave(function () {
+                $('header').stop().animate({ height: '80px' }, 500);
+            });*/
+            $('button').click(function(){
+                $('aside').toggleClass('open');
+                if($('aside').hasClass('open')) {
+                    $('aside').stop().animate({right:0},500,'easeInQuad');
+                    $('button').find('img').attr({'src':'./img/aside/btn_close.png', 'alt':'close'});
+                } else {
+                    $('aside').stop().animate({right:'-220px'},500,'easeOutQuad');
+                    $('button').find('img').attr({'src':'./img/aside/btn_open.png', 'alt':'open'});
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1><img src="./img/home/eagle3.png" width="100" height="38"/></h1>
+        <h2>Welcome to My Homepage</h2>
+        <div class="menu">
+            <ul class="nav">
+                <li><a href="#">Who I am</a></li>
+                <li><a href="#">Career</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="#">sub1-1</a></li>
+                        <li><a href="#">sub1-2</a></li>
+                        <li><a href="#">sub1-3</a></li>
+                        <li><a href="#">sub1-4</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="./webpage_layout2.html">My favorite</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="#">sub1-1</a></li>
+                        <li><a href="#">sub1-2</a></li>
+                        <li><a href="#">sub1-3</a></li>
+                        <li><a href="#">sub1-4</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="./codingschool.html">Coding School</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="#">sub1-1</a></li>
+                        <li><a href="#">sub1-2</a></li>
+                        <li><a href="#">sub1-3</a></li>
+                        <li><a href="#">sub1-4</a></li>
+                    </ul> -->
+                </li>
+                <li><a href="./searchmap.html" target="_blank">찾아오시는길</a></li>
+                <li><a href="join.html" target="_blank">회원가입</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 메인비주얼 -->
+    <div class="section1">
+        <b><i>목마와 숙녀</i></b>
+        <p>한 잔의 술을 마시고
+
+            우리는 버지니아 울프의 생애와
+
+            목마를 타고 떠난 숙녀의 옷자락을 이야기한다
+
+            목마는 주인을 버리고 거저 방울 소리만 울리며
+
+            가을 속으로 떠났다 술병에 별이 떨어진다
+
+            상심(傷心) 한 별은 내 가슴에 가벼웁게 부서진다
+
+            그러한 잠시 내가 알던 소녀는
+
+            정원의 초목 옆에서 자라고
+
+            문학이 죽고 인생이 죽고
+
+            사랑의 진리마저 애증(愛憎)의 그림자를 버릴 때
+
+            목마를 탄 사랑의 사람은 보이지 않는다
+
+            세월은 가고 오는 것
+
+            한때는 고립을 피하여 시들어가고
+
+            이제 우리는 작별하여야 한다
+
+            술병이 바람에 쓰러지는 소리를 들으며
+
+            늙은 여류 작가의 눈을 바라다보아야 한다
+
+            ······등대······
+
+            불이 보이지 않아도
+
+            그저 간직한 페시미즘의 미래를 위하여
+
+            우리는 처량한 목마 소리를 기억하여야 한다
+
+            모든 것이 떠나든 죽든
+
+            거저 가슴에 남은 희미한 의식을 붙잡고
+
+            우리는 버지니아 울프의 서러운 이야기를 들어야 한다
+
+            두 개의 바위 틈을 지나 청춘을 찾는 뱀과 같이
+
+            눈을 뜨고 한 잔의 술을 마셔야 한다
+
+            인생은 외롭지도 않고
+
+            그저 잡지의 표지처럼 통속(通俗) 하거늘
+
+            한탄할 그 무엇이 무서워서 우리는 떠나는 것일까
+
+            목마는 하늘에 있고
+
+            방울 소리는 귓전에 철렁거리는데
+
+            가을 바람 소리는
+
+            내 쓰러진 술병 속에서 목메어 우는데ㅡ
+        </p>
+        <!--
+        <p>어떠한 인생을 살아가든 필요할 때 힘이 되도록 책임지는 인생금융</p>
+        <div class="container">
+            <div class="quick">
+                <h3>비전</h3>
+                <p>삼성생명이 하는 일은 고객의 소중한 사랑을 더 큰 사랑으로 키워 주는 것입니다.</p>
+            </div>
+            <div class="quick">
+                <h3>사회공헌</h3>
+                <p>'사람,사랑'의 가치를 바탕으로 생명존중과 청소년교육을 테마로한 사회공헌을 이행하고 있습니다.</p>
+            </div>
+            <div class="quick">
+                <h3>경영정보</h3>
+                <p>삼성생명은 주주와 고객, 사회와 국가에게 변함없는 믿음을 전하겠습니다.</p>
+            </div>
+        -->
+        <!--                        
+            <div class="quick last"> --> <!-- 클래스명이 2개 -->
+        <!--                
+                <h3>채용안내</h3>
+                <p>앞으로 더 빛날 당신과 함께 삼성생명의 내일이 시작됩니다.</p>
+            </div>
+        </div>
+        -->
+    </div>
+    <!-- 세션2 -->
+    <div class="section2">
+        <div class="intro1">
+            <h3>지속가능경영</h3>
+            <p>기업시민의 역할을 적극적으로 실천하는 존경받는
+                금융회사로 더욱 굳건히 서겠습니다.</p>
+        </div>
+        <div class="intro2">
+            <h3>Contact</h3>
+            <p>lomangs@yahoo.com</p>
+            <p>010-****-****</p>
+        </div>
+    </div>
+
+        <!-- 어사이드 -->
+    <aside>
+        <a href="#"><img src="./img/aside/photo_review.jpg" alt=""/></a>
+        <nav id="asidenav">
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">상품문의</a></li>
+                <li><a href="#">배송조회</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">관심상품</a></li>
+            </ul>
+         </nav>
+         <button><img src="./img/aside/btn_open.png" alt="open"></button>
+    </aside>
+    <!-- end 어사이드 -->
+</body>
+
+</html>

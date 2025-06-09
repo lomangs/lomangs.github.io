@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/* 초기화 */
+*{
+    margin:0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+/* 헤더 */
+header{
+    width: 100%;height: 80px;
+    overflow: hidden;
+    position: fixed;
+    top:0;left:0;
+    background-color: #fff;
+}
+
+header .inner {
+    width: 1200px; height: 80px;
+    margin:0 auto;
+}
+
+header h1 {
+    width: 115px; height: 30px;
+    float: left;
+    margin-top: 25px;
+}
+
+#headnav {
+    float: right;
+}
+
+#headnav .mainMenu {
+    width:130px;
+    float: left;
+    text-align: center;
+    line-height: 80px;
+}
+
+#headnav .mainMenu a {
+    width:100%;
+    display: block;
+    color:#666;
+    font-weight: 700;
+}
+
+#headnav ul> .mainMenu:hover > a {  
+    color:orange;
+}
+
+#headnav .subMenu {
+    width: 130px;height: 216px;
+    color:#999;
+    margin:10px 0;
+    border-right: 1px dashed #ddd;
+    box-sizing:boarder-box;
+}
+
+#headnav .mainMenu:first-child .subMenu {
+    border-left:1px dashed #ddd;
+ }
+
+#headnav .subMenu li a {
+     display: block;
+     height: 36px; line-height: 36px;
+     text-align: left;
+     text-indent: 10px;
+     font-size:14px;
+     color:#999;
+ }
+
+ #headnav .subMenu li a:hover {
+   background: #098e59;
+   color:#fff;
+}
+
+header::before {
+    content:"";
+    width: 100%; height: 2px;
+    background-color:#ddd;
+    position: absolute;
+    top:78px; left:0;
+}
+
+/* 메인 */
+#main{
+    padding-top:80px;
+    text-align: center;
+}
+#main  img {
+   width: 100%;
+}
+
+/* aside */
+aside {
+    position: fixed;
+    top: 0;
+    right: -220px;
+    width: 220px;
+    height: 100%;
+    padding: 20px;
+    background: #fff;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+aside #asidenav {
+    margin-top: 20px;
+}
+
+aside #asidenav a {
+    display: block;
+    height: 36px;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 36px;
+}
+
+aside #asidenav a:hover {
+    background: #333;
+}
+
+aside button {
+    display: block;
+    width: 52px;
+    height: 132px;
+    position: absolute;
+    top: 150px;
+    left: -52px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-right: 0;
+    cursor: pointer;
+}

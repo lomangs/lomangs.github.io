@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/check.js"></script>
+    <script>
+        function check(xx)
+        {
+            //alert(xx.id.value);
+            //1) id에 첫글자영어,영어,숫자,_아니면 경고창
+//            if(!isID(xx.id.value)) {
+            if(!isID(xx.id)) {
+                alert("id가 적절하지 않습니다.")
+                return false;
+            }
+            //2) pwd에 널이면 암호를 입력해주세요 경고창
+            if(isNull(xx.pwd, "암호가 널입니다.")) {
+                return false;
+            }
+
+            if(!isSame(xx.pwd, xx.pwd1)) {
+                alert("암호가 동일하지 않습니다.")
+                return false;
+            }
+
+            //3) name에 숫자이거나 널이면 경고창
+            if(isNumber(xx.name)) {
+                alert("이름은 숫자를 입력하시면 안됩니다.");
+                return false;
+             }
+            if(isNull(xx.name)) {
+                alert("이름은 널이면 안됩니다");
+                return false;
+            }
+            //4) mail에 email형식이 아니면 경고창
+            if(!isEmail(xx.mail)) {
+                alert("이메일형식이 아닙니다");
+                return false;
+            }
+
+            if(!isSSN(xx.jumin1, xx.jumin2)) {
+                alert("주민번호가 틀렸습니다");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<form action="result.html" onsubmit="return check(this);" method="get"  name="">
+    <label>아이디</label><input type="text" name="id"><br/>
+    <label>비번</label><input type="text" name="pwd"><br/>
+    <label>비번확인</label><input type="text" name="pwd1"><br/>
+    <label>이름</label><input type="text" name="name"><br/>
+    <label>이메일</label><input type="text" name="mail"><br/>
+    <label>주민번호</label><input type="text" name="jumin1">
+    <label>-</label><input type="text" name="jumin2"><br/>
+    <input type="submit" value="전송">
+    <input type="reset" value="취소">
+</form>
+</body>
+</html>
